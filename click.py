@@ -14,7 +14,7 @@ import re
 demo = False  # Set to False for production
 
 # Proxy settings
-PROXY_SERVER = "http://127.0.0.1:808"
+PROXY_SERVER = "http://127.0.0.1:3000"
 
 # Scroll down amount (in pixels)
 scroll_down = 200
@@ -61,7 +61,7 @@ def create_default_tinyproxy_config():
     # Generate the session ID (will be used for ALL session- occurrences)
     session_id = generate_random_string()
     
-    config_content = f"""Port 808
+    config_content = f"""Port 3000
 Listen 127.0.0.1
 Timeout 600
 Allow 127.0.0.1
