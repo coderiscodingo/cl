@@ -14,7 +14,7 @@ import re
 demo = False  # Set to False for production
 
 # Proxy settings
-PROXY_SERVER = "http://127.0.0.1:3000"
+PROXY_SERVER = "http://127.0.0.1:808"
 
 # Scroll down amount (in pixels)
 scroll_down = 200
@@ -29,8 +29,8 @@ upward_shift = 20
 left_after_upward = 100
 
 # Time to wait before clicking (random between these values in milliseconds)
-WAIT_BEFORE_CLICK_MIN = 40000  # 30 seconds
-WAIT_BEFORE_CLICK_MAX = 60000  # 40 seconds
+WAIT_BEFORE_CLICK_MIN = 50000  # 30 seconds
+WAIT_BEFORE_CLICK_MAX = 75000  # 40 seconds
 
 # Time to wait for URL change (seconds)
 URL_CHANGE_TIMEOUT = 7
@@ -61,7 +61,7 @@ def create_default_tinyproxy_config():
     # Generate the session ID (will be used for ALL session- occurrences)
     session_id = generate_random_string()
     
-    config_content = f"""Port 3000
+    config_content = f"""Port 808
 Listen 127.0.0.1
 Timeout 600
 Allow 127.0.0.1
