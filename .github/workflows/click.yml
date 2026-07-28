@@ -1,4 +1,4 @@
-name: Playwright python
+name: Playwright Python2
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        instance: [1,2,3,4,5]
+        instance: [1]
 
     steps:
       - name: Checkout repository
@@ -21,25 +21,27 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Python dependencies
-        run: |
-          pip install playwright
-          pip install requests
-          pip install psutil
-          pip install pynput
-          pip install aiohttp
-
-      - name: Install Playwright Browsers
-        run: |
-          playwright install-deps
-          playwright install chromium
-
       - name: Install tinyproxy
-        run: sudo apt install tinyproxy
-
-
-      
-      - name: Start scripts
         run: |
-          xvfb-run bash run.sh
-          wait
+          sudo apt update
+          sudo apt install tinyproxy -y
+
+      - name: Start tinyproxy
+        run: |
+          tinyproxy -d -c tinyproxy.conf &
+
+      - name: clone repo
+        run: |
+          git clone https://github.com/coderiscodingo/cl && cd cl
+
+      - name: Run docker compose
+        run: |
+          cd cl && docker compose -f docker-compose.yml up -d --build
+
+      - name: Keep workflow running for 6 hours
+        run: |
+          echo "Docker compose completed. Keeping workflow alive for 6 hours..."
+          echo "Start time: $(date)"
+          sleep 21600  # 6 hours = 21600 seconds
+          echo "End time: $(date)"
+          echo "6 hours completed. Workflow will now finish."
