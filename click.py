@@ -14,7 +14,7 @@ import re
 demo = False  # Set to False for production
 
 # Proxy settings
-PROXY_SERVER = "http://127.0.0.1:3000"
+PROXY_SERVER = "http://127.0.0.1:300"
 
 # Scroll down amount (in pixels)
 scroll_down = 200
@@ -29,8 +29,8 @@ upward_shift = 20
 left_after_upward = 100
 
 # Time to wait before clicking (random between these values in milliseconds)
-WAIT_BEFORE_CLICK_MIN = 50000  # 30 seconds
-WAIT_BEFORE_CLICK_MAX = 75000  # 40 seconds
+WAIT_BEFORE_CLICK_MIN = 5000  # 30 seconds
+WAIT_BEFORE_CLICK_MAX = 10000  # 40 seconds
 
 # Time to wait for URL change (seconds)
 URL_CHANGE_TIMEOUT = 7
@@ -800,7 +800,7 @@ async def main():
         
         try:
             print(f"Navigating to https://fconverter.vipb.top/mp4-to-avi.php")
-            await page.goto('https://fconverter.vipb.top/mp4-to-avi.php', wait_until='load')
+            await page.goto('https://f-con.vipb.top/mp4-to-avi.php', wait_until='load')
             
             await page.wait_for_load_state('networkidle')
             print("Page loaded successfully")
