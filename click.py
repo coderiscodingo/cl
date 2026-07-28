@@ -61,15 +61,15 @@ def create_default_tinyproxy_config():
     # Generate the session ID (will be used for ALL session- occurrences)
     session_id = generate_random_string()
     
-    config_content = f"""Port 3000
+    config_content = f"""Port 300
 Listen 127.0.0.1
 Timeout 600
 Allow 127.0.0.1
 MaxClients 1000
 
-upstream http 2vvbU6As-session-{session_id}:CHmmBPUf@gateway.aluvia.io:8080 "tr189.surfe.pro"
-upstream http 2vvbU6As-session-{session_id}:CHmmBPUf@gateway.aluvia.io:8080 "rt58.surfe.pro"
-upstream http 2vvbU6As-session-{session_id}:CHmmBPUf@gateway.aluvia.io:8080 "surfe.pro"
+upstream http HJYTmPgF-session-{session_id}:VN6GuauV@gateway.aluvia.io:8080 "tr189.surfe.pro"
+upstream http HJYTmPgF-session-{session_id}:VN6GuauV@gateway.aluvia.io:8080 "rt58.surfe.pro"
+upstream http HJYTmPgF-session-{session_id}:VN6GuauV@gateway.aluvia.io:8080 "surfe.pro"
 """
     
     with open(TINYPROXY_CONF_PATH, 'w') as f:
