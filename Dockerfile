@@ -43,4 +43,4 @@ Xvfb :99 -screen 0 1920x1080x24 & \
 sleep 5 && \
 export DISPLAY=:99 && \
 xdpyinfo && \
-bash run.sh'
+python click.py'
