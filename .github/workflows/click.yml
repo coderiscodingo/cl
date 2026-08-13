@@ -45,4 +45,4 @@ jobs:
 
       
       - name: Run Script in Virtual Display
-        run: xvfb-run python click1.py
+        run: xvfb-run python click.py
