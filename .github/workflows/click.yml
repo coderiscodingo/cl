@@ -41,7 +41,7 @@ jobs:
       - name: Install Xvfb 
         run: |
           sudo apt update
-          sudo apt install xvfb tinyproxy -y
+          sudo apt install xvfb
 
       
       - name: Run Script in Virtual Display
