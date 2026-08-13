@@ -14,8 +14,8 @@ def generate_random_string(length=9):
 def get_proxy_config():
     """Generate proxy configuration with random session string"""
     random_session = generate_random_string(9)
-    username = f"Pd3aXzKd-session-{random_session}"
-    password = "SWJ3dr6a"
+    username = f"F7PKJCvU-session-{random_session}"
+    password = "NUm0qBvSL7FW"
     
     return {
         "server": "http://gateway.aluvia.io:8080",
