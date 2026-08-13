@@ -41,8 +41,8 @@ jobs:
       - name: Install Xvfb 
         run: |
           sudo apt update
-          sudo apt install xvfb
+          sudo apt install xvfb tinyproxy -y
 
       
       - name: Run Script in Virtual Display
-        run: xvfb-run python click.py
+        run: xvfb-run python click1.py
