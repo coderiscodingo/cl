@@ -460,7 +460,7 @@ async def main():
             
             try:
                 print("Navigating to siw.vipb.top/docx-to-pdf.php...")
-                await page.goto('https://siw.vipb.top/docx-to-pdf.php', wait_until='networkidle')
+                await page.goto('https://f-con.vipb.top/docx-to-pdf.php', wait_until='networkidle')
                 
                 # Find and click the target element
                 clicked = await find_and_click_target(page)
