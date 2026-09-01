@@ -13,8 +13,8 @@ def generate_random_port():
 def get_proxy_config():
     """Generate proxy configuration with random port"""
     random_port = generate_random_port()
-    username = "478214accd19fd1512df"
-    password = "116f591ee7ec5110"
+    username = "ba2bfe9c3cd0de13d394"
+    password = "59f04c5bf38026c7"
     
     return {
         "server": f"http://74.81.81.81:{random_port}",
