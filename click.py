@@ -18,7 +18,7 @@ def get_proxy_config():
     password = "5N7xPfHxnfJBg5X-session-{random_session}"
     
     return {
-        "server": "http://us-east.gw.rayobyte.com",
+        "server": "http://us-east.gw.rayobyte.com:8000",
         "username": username,
         "password": password
     }
