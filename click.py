@@ -14,11 +14,11 @@ def generate_random_string(length=9):
 def get_proxy_config():
     """Generate proxy configuration with random session string"""
     random_session = generate_random_string(9)
-    username = f"a79PZHjq-session-{random_session}"
-    password = "MRFT3BmOE4MW"
+    username = f"decencyawowo2021_gmail_com-dc-session-{random_session}"
+    password = "5N7xPfHxnfJBg5X"
     
     return {
-        "server": "http://gateway.aluvia.io:8080",
+        "server": "http://us-east.gw.rayobyte.com",
         "username": username,
         "password": password
     }
