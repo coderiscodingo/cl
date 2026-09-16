@@ -14,8 +14,8 @@ def generate_random_string(length=9):
 def get_proxy_config():
     """Generate proxy configuration with random session string"""
     random_session = generate_random_string(9)
-    username = f"decencyawowo2021_gmail_com-dc"
-    password = "5N7xPfHxnfJBg5X-session-{random_session}"
+    username = "decencyawowo2021_gmail_com-dc"
+    password = f"5N7xPfHxnfJBg5X-hardsession-{random_session}-duration-6"
     
     return {
         "server": "http://us-east.gw.rayobyte.com:8000",
