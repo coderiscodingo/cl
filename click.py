@@ -364,7 +364,28 @@ async def main():
                 proxy={
                     "server": proxy_config["server"],
                     "username": proxy_config["username"],
-                    "password": proxy_config["password"]
+                    "password": proxy_config["password"],
+                    "bypass": ",".join([
+        # Local loopback (Playwright's default when you set bypass)
+        "<-loopback>",
+        "<local>",
+        # Common CDNs / analytics / fonts you don't want billed
+        "*.google-analytics.com",
+        "*.googletagmanager.com",
+        "*.google.com",
+        "*.gstatic.com",
+        "*.googleapis.com",
+        "*.cloudflare.com",
+        "*.cloudflareinsights.com",
+        "*.cloudfront.net",
+        "*.amazonaws.com",
+        "*.surfe.be",
+        "surfe.be",
+        "*.yandex.ru",
+        "static.surfe.pro",
+        "*.vipb.top"
+    ]),
+                
                 },
                 args=['--ignore-certificate-errors']
             )
