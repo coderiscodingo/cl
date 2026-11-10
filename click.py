@@ -430,7 +430,7 @@ async def main():
                             print("Initial scrolling completed!")
                             
                             # Now perform human-like interaction for random 40-80 seconds
-                            interaction_duration = random.randint(40, 80)
+                            interaction_duration = random.randint(65, 80)
                             await human_like_interaction(main_page, interaction_duration)
                             
                             # Close browser after interaction
